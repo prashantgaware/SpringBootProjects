@@ -14,5 +14,26 @@
 		<property name="productName" value="Samsung"></property>
 		<property name="productPrice" value="80000"></property>
 	</bean>
+	<bean id="product3" class="com.nt.Product">
+		<property name="id" value="3"></property>
+		<property name="productName" value="Pixel"></property>
+		<property name="productPrice" value="70000"></property>
+	</bean>
+	
+	 
+	<bean id="order1" class="com.nt.Order">
+		<property name="emailId" value="asdf@asdf.com"></property>
+		<property name="totalAmount" value="300.00"></property>
+		<property name="isOrderSuccess" value="true"></property>
+		<property name="foodType" value="N"></property>
+		<property name="mobileNo" value="1234567890"></property>
+	</bean>
+	<bean id="order2" class="com.nt.Order">
+		<property name="emailId" value="sdfdsfa@asdf.com"></property>
+		<property name="totalAmount" value="200.00"></property>
+		<property name="isOrderSuccess" value="false"></property>
+		<property name="foodType" value="V"></property>
+		<property name="mobileNo" value="1237457890"></property>
+	</bean>
 
 </beans>

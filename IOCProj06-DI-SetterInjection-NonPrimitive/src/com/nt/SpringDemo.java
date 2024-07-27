@@ -1,5 +1,7 @@
 package com.nt;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
@@ -30,6 +32,9 @@ public class SpringDemo {
 		System.out.println();
 		Order order1 = (Order) factory.getBean("order1");
 		System.out.println(order1);
+		List<String> items = order1.getFoodItems();
+//		for(String item : items)
+//			System.out.println(item);
 		System.out.println();
 		Order order2 = (Order) factory.getBean("order2");
 		System.out.println(order2);
