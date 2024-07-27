@@ -2,6 +2,7 @@ package com.nt.test;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 
 import com.nt.beans.WishMessageGenerator;
@@ -11,9 +12,9 @@ public class SetterInjectionTest {
 	public static void main(String[] args) {
 		FileSystemResource res = new FileSystemResource("src/main/java/com/nt/cfgs/applicationContext.xml");
 		
-		DefaultListableBeanFactory factory = new DefaultListableBeanFactory((BeanFactory) res);
+//		DefaultListableBeanFactory factory = new DefaultListableBeanFactory((BeanFactory) res);
 		
-//		BeanFactory factory = new BeanFactory(res);
+		BeanFactory factory = new FileSystemXmlApplicationContext("src/main/java/com/nt/cfgs/applicationContext.xml");
 		
 		Object obj = factory.getBean("wmg");
 		

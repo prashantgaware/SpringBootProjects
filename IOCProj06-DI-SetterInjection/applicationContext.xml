@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="product1" class="com.nt.Product">
+		<property name="id" value="1"></property>
+		<property name="productName" value="iPhone"></property>
+		<property name="productPrice" value="50000"></property>
+	</bean>
+	<bean id="product2" class="com.nt.Product">
+		<property name="id" value="2"></property>
+		<property name="productName" value="Samsung"></property>
+		<property name="productPrice" value="80000"></property>
+	</bean>
+
+</beans>
