@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="s1" class="com.nt.Student">
+		<property name="id" value="1"></property>
+	    <property name="name" value="asdf" />
+	    <property name="subjects">
+	        <set>
+	        	<value>Java</value>
+	        	<value>CPP</value>
+	        	<value>Python</value>
+	        	<value>C</value>
+	        </set>
+	    </property>
+	    <property name="subMarks">
+	    	<map>
+	    		<entry key="Java" value="88" />
+	    		<entry key="CPP" value="88" />
+	    		<entry key="Python" value="88" />
+	    		<entry key="C" value="88" />
+	    	</map>
+	    </property>
+	</bean>
+	<bean id="s2" class="com.nt.Student">
+		<property name="id" value="2"></property>
+	    <property name="name" value="sdfdsfa" />
+	    <property name="subjects">
+	        <set>
+	        	<value>PSIR</value>
+	        	<value>History</value>
+	        	<value>Biology</value>
+	        	<value>Polity</value>
+	        </set>
+	    </property>
+	    <property name="subMarks">
+	    	<map>
+	    		<entry key="PSIR" value="88" />
+	    		<entry key="History" value="88" />
+	    		<entry key="Biology" value="88" />
+	    		<entry key="Polity" value="88" />
+	    	</map>
+	    </property>
+	</bean>
+
+</beans>
