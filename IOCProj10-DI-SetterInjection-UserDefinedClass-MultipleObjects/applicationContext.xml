@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="student1" class="com.nt.Student">
+		<property name="id" value="1"></property>
+		<property name="name" value="sdjfjskdf"></property>
+		<property name="mobileNo" value="32582357362"></property>
+	</bean>
+	<bean id="student2" class="com.nt.Student">
+		<property name="id" value="2"></property>
+		<property name="name" value="dsbfhd"></property>
+		<property name="mobileNo" value="35834562784246"></property>
+	</bean>
+	<bean id="college" class="com.nt.College">
+		<property name="collegeName" value="ABC college"></property>
+		<property name="student">
+			<list>
+				<ref bean="student1"/>
+				<ref bean="student2"/>
+			</list>
+		</property>
+	</bean>
+
+</beans>
