@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="prod1" class="com.nt.Product">
+		<property name="name" value="prod1"></property>
+		<property name="id" value="1"></property>
+		<property name="amount" value="2844.00"></property>
+	</bean>
+	
+	<bean id="order" class="com.nt.Order">
+		<property name="orderId" value="100"></property>
+		<property name="product" ref="prod1"></property>
+	</bean>
+
+</beans>
