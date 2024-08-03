@@ -7,10 +7,11 @@ public class SpringDemo {
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new FileSystemXmlApplicationContext(
-				"D:\\Practice\\SpringBootProjects\\IOCProj12-DI-AutoWiring\\applicationContext.xml");
+				"D:\\Practice\\SpringBootProjects\\IOCProj13-DI-AutoWiring-ByName\\applicationContext.xml");
 		System.out.println();
 
 		Order order = (Order) context.getBean("order");
-		System.out.println(order.toString());
+		System.out.println(order.getProduct());
+		System.out.println(order.getTransaction());
 	}
 }

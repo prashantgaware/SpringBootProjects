@@ -5,14 +5,14 @@
 <beans>
 
 	<bean id="prod1" class="com.nt.Product">
-		<property name="name" value="prod1"></property>
+		<!-- <property name="name" value="prod1"></property>
 		<property name="id" value="1"></property>
-		<property name="amount" value="2844.00"></property>
+		<property name="amount" value="2844.00"></property> -->
 	</bean>
 	
-	<bean id="order" class="com.nt.Order">
-		<property name="orderId" value="100"></property>
-		<property name="product" ref="prod1"></property>
+	<bean id="order" class="com.nt.Order" autowire="no">
+		<!-- <property name="orderId" value="100"></property>
+		<property name="product" ref="prod1"></property> -->
 	</bean>
 
 </beans>
