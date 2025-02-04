@@ -8,7 +8,7 @@ import com.nt.org.Employee;
 import com.nt.org.Organization;
 import com.nt.zoo.Zoo;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.nt.zoo", "com.nt"})
 public class BootProj01AutowiredApplication {
 
 	public static void main(String[] args) {

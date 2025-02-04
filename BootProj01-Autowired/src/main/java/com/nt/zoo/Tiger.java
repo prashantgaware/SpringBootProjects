@@ -1,5 +1,8 @@
 package com.nt.zoo;
 
+import org.springframework.stereotype.Component;
+
+@Component("tiger")
 public class Tiger implements Animal {
 
 	@Override
