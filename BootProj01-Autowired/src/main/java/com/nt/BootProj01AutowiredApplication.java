@@ -24,6 +24,11 @@ public class BootProj01AutowiredApplication {
 		
 		Zoo zoo = ctx.getBean(Zoo.class);
 		System.out.println(zoo);
+		zoo.lion.getAnimalName();
+		System.out.println(zoo.lion.getAnimaCount("lion"));
+		System.out.println("=====================");
+		zoo.tiger.getAnimalName();
+		System.out.println(zoo.tiger.getAnimaCount("tiger"));
 	}
 
 }
