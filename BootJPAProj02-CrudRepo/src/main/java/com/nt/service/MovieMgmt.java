@@ -1,5 +1,9 @@
 package com.nt.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +31,66 @@ public class MovieMgmt implements IMovieMgmt {
 	public boolean checkMovieById(int id) {
 		// TODO Auto-generated method stub
 		return movieRepo.existsById(2);
+	}
+
+	@Override
+	public Iterable<Movie> findAllMovies() {
+		
+		return movieRepo.findAll();
+	}
+
+	@Override
+	public Iterable<Movie> fetchAllMoviesByIds(List<Integer> ids) {
+		
+		return movieRepo.findAllById(ids);
+	}
+
+	@Override
+	public Movie fetchMovieById(int id) {
+		Optional<Movie> opt = movieRepo.findById(id);
+		if (opt.isPresent()) {
+			return opt.get();
+		} else {
+			return new Movie();
+		}
+	}
+
+	@Override
+	public Movie fetchOptionalMovieById(int id) {
+		return movieRepo.findById(id)
+				.orElse(new Movie());
+	}
+
+	@Override
+	public Optional<Movie> getherMovieById(int id) {
+		Optional<Movie> opt = movieRepo.findById(id);
+		return opt.isEmpty() ? Optional.empty() : opt;
+	}
+
+	@Override
+	public String saveAllMovies(List<Movie> movies) {
+		Iterable<Movie> savedMovies = movieRepo.saveAll(movies);
+		List<Integer> movieIds = new ArrayList<Integer>();
+		if (savedMovies != null && ((List<Movie>) savedMovies).size() > 0) {
+			savedMovies.forEach(m -> {
+				movieIds.add(m.getMovieId());
+			});
+		}
+		return movieIds.toString();
+	}
+
+	@Override
+	public String updateMovieDetails(int id, String year, float rating) {
+		Optional<Movie> opt = movieRepo.findById(id);
+		if (opt.isPresent()) {
+			Movie movie = opt.get();
+			movie.setMovieRating(rating);
+			movie.setReleaseYear(year);
+			movieRepo.save(movie);
+			return "Movie updated with " + id;
+		} else {
+			return "Movie not found with " + id;
+		}
 	}
 
 }
