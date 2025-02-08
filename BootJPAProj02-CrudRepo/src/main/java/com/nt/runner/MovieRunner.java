@@ -28,6 +28,19 @@ public class MovieRunner implements CommandLineRunner {
 		} catch (Exception e) {
 			e.printStackTrace();
 		};
+		
+		System.out.println("**********************");
+		try {
+			System.out.println(movieMgmt.fetchMovieCount());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("**********************");
+		try {
+			System.out.println("Is there? " + movieMgmt.checkMovieById(2));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

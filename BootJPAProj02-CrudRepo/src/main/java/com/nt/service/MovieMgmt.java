@@ -18,4 +18,15 @@ public class MovieMgmt implements IMovieMgmt {
 		return "Movie saved";
 	}
 
+	@Override
+	public long fetchMovieCount() {
+		return movieRepo.count();
+	}
+
+	@Override
+	public boolean checkMovieById(int id) {
+		// TODO Auto-generated method stub
+		return movieRepo.existsById(2);
+	}
+
 }
