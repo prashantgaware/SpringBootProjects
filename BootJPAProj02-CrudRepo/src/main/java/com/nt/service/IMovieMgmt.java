@@ -24,4 +24,14 @@ public interface IMovieMgmt {
 	String saveAllMovies(List<Movie> movies);
 	
 	String updateMovieDetails(int id, String year, float rating);
+	
+	String deleteMovieById(int id);
+	
+	String deleteAllById(List<Integer> ids);
+	
+	String deleteByMovieObj(Movie m);
+	
+	String deleteMovies(List<Movie> movies);
+	
+	String deleteAllMovies();
 }

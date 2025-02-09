@@ -1,6 +1,8 @@
 package com.nt.service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -91,6 +93,43 @@ public class MovieMgmt implements IMovieMgmt {
 		} else {
 			return "Movie not found with " + id;
 		}
+	}
+
+	@Override
+	public String deleteMovieById(int id) {
+		movieRepo.deleteById(id);
+		return "Movie with " + id + " deleted";
+	}
+
+	@Override
+	public String deleteAllById(List<Integer> ids) {
+		movieRepo.deleteAllById(ids);
+		return "deleted mvies";
+	}
+
+	@Override
+	public String deleteByMovieObj(Movie m) {
+		movieRepo.delete(m);
+		return m.getMovieName() + " deleted.";
+	}
+
+	@Override
+	public String deleteMovies(List<Movie> movies) {
+		List<String> names = new ArrayList<>();
+		for (Movie movie : movies) {
+			names.add(movie.getMovieName());
+		}
+		movieRepo.deleteAll(movies);
+		return "Deleted movies: " + names.toString();
+	}
+
+	@Override
+	public String deleteAllMovies() {
+		long count = movieRepo.count();
+		if (count != 0) {
+			movieRepo.deleteAll();
+		}
+		return count + " mvies deleted.";
 	}
 
 }

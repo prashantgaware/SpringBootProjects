@@ -127,6 +127,36 @@ public class MovieRunner implements CommandLineRunner {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println("********deleteById()");
+		try {
+			System.out.println(movieMgmt.deleteMovieById(58));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("*******deleteAllByID() **********");
+		try {
+			System.out.println(movieMgmt.deleteAllById(Arrays.asList(64,32,54)));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("********delete() with object ***********");
+		try {
+			System.out.println(movieMgmt.deleteByMovieObj(new Movie("Dune", 8.1f, "2021")));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("*******deleteAllById(List<Movie> movies)");
+		try {
+			System.out.println(movieMgmt.deleteMovies(Arrays.asList(new Movie("Avengers: Endgame", 8.4f, "2019"), new Movie("Joker", 8.4f, "2019"))));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("******deleteAll()**************");
+		try {
+			System.out.println(movieMgmt.deleteAllMovies());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
