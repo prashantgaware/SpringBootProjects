@@ -37,6 +37,13 @@ public class MovieRunner implements CommandLineRunner {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println("******getById(int id)********");
+		try {
+			Movie movie = movieMgmt.searchMovieById(100);
+			System.out.println(movie);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

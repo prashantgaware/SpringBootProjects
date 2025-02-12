@@ -35,5 +35,18 @@ public class MovieMgmt implements IMovieMgmt {
 		return movies;
 	}
 
+	@Override
+	public Movie searchMovieById(int id) {
+		Movie movie = movieRepo.getById(id);
+		if (movie == null) {
+			// no need to throw the exception bcos 
+			// if record is not here spring itself throws
+			// jakarta.persistence.EntityNotFoundException
+			throw new IllegalArgumentException("Movie not available");
+		} else {
+			return movie;
+		}
+	}
+
 	
 }
