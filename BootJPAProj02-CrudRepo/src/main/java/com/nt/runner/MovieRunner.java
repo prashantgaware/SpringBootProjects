@@ -135,7 +135,7 @@ public class MovieRunner implements CommandLineRunner {
 		}
 		System.out.println("*******deleteAllByID() **********");
 		try {
-			System.out.println(movieMgmt.deleteAllById(Arrays.asList(64,32,54)));
+//			System.out.println(movieMgmt.deleteAllById(Arrays.asList(64,32,54)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -153,7 +153,7 @@ public class MovieRunner implements CommandLineRunner {
 		}
 		System.out.println("******deleteAll()**************");
 		try {
-			System.out.println(movieMgmt.deleteAllMovies());
+//			System.out.println(movieMgmt.deleteAllMovies());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
