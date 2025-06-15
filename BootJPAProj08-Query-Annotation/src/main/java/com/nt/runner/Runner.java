@@ -37,7 +37,13 @@ public class Runner implements CommandLineRunner {
 			repo.findById(210).ifPresentOrElse(
 					movie -> System.out.println("Movie updated: " + movie),
 					() -> System.out.println("Movie with ID 210 not found."));
-			System.out.println();
+			System.out.println("--------------------------------------------------");
+			System.out.println("Searching movies by names: 'Titanic', 'Avatar'");
+			repo.searchMoviesByNames("Titanic", "Avatar", "Joker").forEach(System.out::println);
+			
+			System.out.println("--------------------------------------------------");
+			System.out.println("Searching movies by names: 'Stand by Me', 'he Breakfast Club', 'The Godfather'");
+			repo.searchMoviesByNames("Stand by Me", "The Breakfast Club", "The Godfather").forEach(System.out::println);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

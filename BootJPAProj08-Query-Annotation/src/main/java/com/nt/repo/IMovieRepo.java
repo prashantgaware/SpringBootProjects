@@ -32,4 +32,10 @@ public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 	@Query("UPDATE Movie m SET m.movieRating = :rating WHERE m.movieId = :id")
 	int updateMovie(int id, float rating);
 	
+	@Query("SELECT m FROM Movie m WHERE m.movieName IN :names")
+	List<Movie> searchMoviesByNames(String ... names);
+	
+	@Query("SELECT m FROM Movie m WHERE m.movieName IN :names")
+	List<Movie> searchMoviesByNames(List<String> names);
+	
 }
