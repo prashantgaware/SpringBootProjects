@@ -9,5 +9,9 @@ public interface IPersonService {
 	String registerPersonInfo(PersonInfo info);
 	
 	List<PersonInfo> getAllPersons();
+	
+	PersonInfo getPersonById(int id);
+	
+	int getCount();
 
 }

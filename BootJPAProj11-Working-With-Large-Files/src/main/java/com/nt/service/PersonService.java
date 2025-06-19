@@ -1,6 +1,7 @@
 package com.nt.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,4 +25,18 @@ public class PersonService implements IPersonService {
 		return repo.findAll();
 	}
 
+	@Override
+	public PersonInfo getPersonById(int id) {
+		Optional<PersonInfo> person = repo.findById(id);
+		if (person.isPresent()) {
+			return person.get();
+		} else {
+			return null;
+		}
+	}
+
+	@Override
+	public int getCount() {
+		return (int) repo.count();
+	}
 }
