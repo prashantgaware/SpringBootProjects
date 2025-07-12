@@ -64,7 +64,7 @@ public class WishMessageController {
 	@RequestMapping("/wish2")
 	public Model fetchWishMessage() {
 		// This method is not used in the current context, but can be implemented if needed.
-		System.out.println("Shared memoryobject class name: " + map.getClass().getName());
+//		System.out.println("Shared memoryobject class name: " + map.getClass().getName());
 		String message = wishService.getWishMessage();
 		
 		Model map = new BindingAwareModelMap();
