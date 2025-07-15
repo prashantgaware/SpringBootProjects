@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Form</title>
+</head>
+<body>
+	<form action="POST">
+		<h1>User Form</h1>
+        <label for="sname">Name:</label>
+        <input type="text" id="name" name="name" th:value="${user.name}" required />
+        <br />
+        <label for="sno">Number:</label>
+        <input type="text" id="sno" name="sno" th:value="${user.sno}" required />
+        <br />
+        <label for="sadd">Address:</label>
+        <input type="text" id="sadd" name="sadd" th:value="${user.sadd}" required />
+        <br />
+        <label for="avg">Average:</label>
+        <input type="number" id="avg" name="avg" th:value="${user.avg}" required />
+        <button type="submit">Submit</button>
+	</form>
+</body>
+</html>
