@@ -15,6 +15,6 @@ public class TestController {
 	
 	@GetMapping("/getAllData")
 	public String getAll() {
-		return "forward:wish/getAllData";
+		return "forward:/getAllData";
 	}
 }
