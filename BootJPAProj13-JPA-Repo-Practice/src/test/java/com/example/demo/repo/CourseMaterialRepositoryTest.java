@@ -31,5 +31,15 @@ class CourseMaterialRepositoryTest {
 		System.out.println(cm);
 		
 	}
+	
+	@Test
+	public void getCourseMaterial() {
+		System.out.println(courseMaterialRepo.findAll());
+	}
+	
+	@Test
+	public void getCourseMCount() {
+		System.out.println(courseMaterialRepo.count());
+	}
 
 }
