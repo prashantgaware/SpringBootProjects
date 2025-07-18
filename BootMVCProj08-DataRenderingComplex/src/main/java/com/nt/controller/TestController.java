@@ -34,6 +34,7 @@ public class TestController {
 			Map.of("name", "Mohan", "age", 35, "address", "Chennai"),
 			Map.of("name", "Ravi", "age", 22, "address", "Kolkata")
 		));
+		System.out.println("TestController.showResult()");
 		return "show_result";
 	}
 }
