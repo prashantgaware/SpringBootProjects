@@ -24,7 +24,7 @@
 						<td style="align-content: center;"><a href="edit?empNo=${employee.empNo}"><img
 								alt="Not found" src="images/edit.webp" width="50" height="50">Edit</a>
 								&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-							<a href="delete?empNo=${employee.empNo}"><img alt="Not found"
+							<a onclick="return confirm('Do you want to delete?')" href="delete?empNo=${employee.empNo}"><img alt="Not found"
 								src="images/delete.webp" width="50" height="50">Delete</a></td>
 					</tr>
 				</c:forEach>

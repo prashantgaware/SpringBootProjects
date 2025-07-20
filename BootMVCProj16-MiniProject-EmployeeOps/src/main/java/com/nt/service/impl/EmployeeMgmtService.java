@@ -28,7 +28,7 @@ public class EmployeeMgmtService implements IEmployeeMgmtService {
 	}
 
 	@Override
-	public String updateEmployee(Employee employee) {
+	public String editEmployee(Employee employee) {
 		long empId = employeeRepo.save(employee).getEmpNo();
 		return "Employee updated with ID: " + empId;
 	}

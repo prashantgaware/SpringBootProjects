@@ -12,7 +12,7 @@ public interface IEmployeeMgmtService {
 	
 	Employee getEmployeeById(Long empId);
 	
-	String updateEmployee(Employee employee);
+	String editEmployee(Employee employee);
 	
 	String deleteEmployee(Long empId);
 
