@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: SpringRestProj06-MiniProject-CrudOps
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test_db?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: manager
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 100
+      connection-timeout: 60000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
